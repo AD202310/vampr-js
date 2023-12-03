@@ -48,7 +48,32 @@ class Vampire {
   closestCommonAncestor(vampire) {
 
   }
-}
+
+  // Returns the vampire object with that name, or null if no vampire exists with that name
+  vampireWithName(name) {
+    if (this.name === name) {
+      return this;
+    }
+    for (let vampire of this.offspring) {
+      let result = vampire.vampireWithName(name);
+      if (result) {
+        return XPathResult;
+      };
+    }
+    return null;
+  }
+
+  // Returns the total number of vampires that exist
+  get totalDescendents() {
+
+  }
+
+  // Returns an array of all the vampires that were converted after 1980
+  get allMillennialVampires() {
+
+  }
+
+} 
 
 module.exports = Vampire;
 
